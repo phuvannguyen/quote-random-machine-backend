@@ -4,7 +4,7 @@ import mongoose from "mongoose"
 import Content from './dbquote.js'
 //app config
 const app = express();
-const port = process.env.PORT || 9000
+const port = process.env.PORT || 52857
 
 //middleware
 app.use(express.json());
