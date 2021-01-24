@@ -16,6 +16,11 @@ mongoose.connect(connect_URL, { useNewUrlParser: true,  useUnifiedTopology: true
 
 //api routes
 app.get("/", (req, res)=> res.status(200).send("hello world"));
+app.get("/content/quote", async function(req, res) {
+    const content = await Content.find()
+	res.json(content)
+});
+
 app.post("/content/id", (req, res) =>{
     const quote = req.body;
     Content.create(quote, (err, data) => {
