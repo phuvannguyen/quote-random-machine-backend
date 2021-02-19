@@ -2,11 +2,13 @@
 import express from 'express'
 import mongoose from "mongoose"
 import Content from './dbquote.js'
+import cors from "cors"
 //app config
 const app = express();
 const port = process.env.PORT || 52857
 
 //middleware
+app.use(cors)
 app.use(express.json());
 
 
